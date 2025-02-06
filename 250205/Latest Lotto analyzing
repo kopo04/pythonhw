@@ -1,0 +1,62 @@
+import random
+
+# 최근 5회 당첨 번호 기록 (최근 1회부터 최근 5회까지 순서대로 기록)
+nums = [
+    [5, 7, 12, 20, 25, 26],    # 최근 1회
+    [30, 31, 34, 39, 41, 45],   # 최근 2회
+    [10, 16, 19, 27, 37, 38],   # 최근 3회
+    [4, 8, 22, 26, 32, 38],     # 최근 4회
+    [1, 9, 10, 13, 35, 44]      # 최근 5회
+]
+
+# --------------------------------------------------------------------
+# 최근 1회부터 최근 5회까지 각각 계산
+for i in range(len(nums)):
+    draw = nums[i]
+    print("\n최근", i + 1, "회 당첨 번호:", draw)
+
+    # 2, 3, 5, 7의 배수 개수 구하기 
+    multiples = {}
+    multiples[2] = 0
+    multiples[3] = 0
+    multiples[5] = 0
+    multiples[7] = 0
+
+    for num in draw:
+        if num % 2 == 0:
+            multiples[2] += 1
+        if num % 3 == 0:
+            multiples[3] += 1
+        if num % 5 == 0:
+            multiples[5] += 1
+        if num % 7 == 0:
+            multiples[7] += 1
+    print("  2, 3, 5, 7의 배수 개수:")
+    for key in [2, 3, 5, 7]:
+        print("    {}의 배수: {}개".format(key, multiples[key]))
+
+    # 홀수와 짝수 개수 구하기
+    odd_count = 0
+    even_count = 0
+    for num in draw:
+        if num % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+    print("  홀수: {}개, 짝수: {}개".format(odd_count, even_count))
+
+    # 평균, 최솟값, 최댓값 구하기
+    total = 0
+    for num in draw:
+        total += num
+    average = total / len(draw)
+
+    # 최솟값, 최댓값을 직접 계산
+    min_num = draw[0]
+    max_num = draw[0]
+    for num in draw:
+        if num < min_num:
+            min_num = num
+        if num > max_num:
+            max_num = num
+    print("  평균: {:.2f}, 최솟값: {}, 최댓값: {}".format(average, min_num, max_num))
