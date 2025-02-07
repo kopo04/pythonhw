@@ -16,8 +16,7 @@ for i in range(len(nums)):
     print("\n최근", i + 1, "회 당첨 번호:", draw)
 
     # 2, 3, 5, 7의 배수 개수 구하기 
-    multiplesCnt2357 = [2, 3, 5, 7]
-
+ 
     cnt2 = 0
     cnt3 = 0
     cnt5 = 0
@@ -34,10 +33,10 @@ for i in range(len(nums)):
             cnt7 += 1
     print("  2, 3, 5, 7의 배수 개수:")
     
-    print("    {}의 배수: {}개".format( multiplesCnt2357[0], cnt2))
-    print("    {}의 배수: {}개".format( multiplesCnt2357[1], cnt3))
-    print("    {}의 배수: {}개".format( multiplesCnt2357[2], cnt5))
-    print("    {}의 배수: {}개".format( multiplesCnt2357[3], cnt7))
+    print("    2의 배수: {}개".format( cnt2))
+    print("    3의 배수: {}개".format( cnt3))
+    print("    5의 배수: {}개".format( cnt5))
+    print("    7의 배수: {}개".format( cnt7))
 
     # 홀수와 짝수 개수 구하기
     odd_count = 0
