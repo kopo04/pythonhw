@@ -1,12 +1,21 @@
 #include <stdio.h>
-// Hello World
-/*
-Hello World
-*/
 
 void main()
-{   int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
-    double z = a + b + c;
-    printf("%lf", z);
+{   int sum;
+    int num;
+    int hundred;
+    int ten;
+    int one;
+    
+    printf("세 자리의 정수를 입력하세요");
+    
+    scanf("%d", &num);
+    
+    hundred = num / 100;
+    ten = (num % 100) / 10;
+    one = num % 10;
+    
+    sum = hundred + ten + one;
+    
+    printf("합: %d", sum);
 }
