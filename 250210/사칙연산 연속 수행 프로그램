@@ -6,8 +6,8 @@ Hello World
 
 void main()
 {
-    int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
+    double a, b, c;
+    scanf("%lf %lf %lf", &a, &b, &c);
     if (c == 0)
     {
       printf("0이 아닌 정수를 입력 하세요.");
