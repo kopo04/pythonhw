@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(void){
+    
+    int score;
+    double bonus = 0.0;
+    
+    printf("시험 점수를 입력하세요: ");
+    scanf("%d", &score);
+    
+    switch (score / 10){
+        case 10:
+        case 9:
+            printf("A 등급\n");
+            bonus = score * 0.10;
+            break;
+        case 8:
+            printf("B 등급\n");
+            bonus = score * 0.05;
+            break;
+        case 7:
+            printf("C 등급\n");
+            break;
+        case 6:
+            printf("D 등급\n");
+            break;
+        default:
+            printf("F 등급\n");
+            break;
+    }
+    
+    printf("추가 보너스: %.2lf\n", bonus);
+    printf("최종 점수: %.2lf\n", score + bonus);
+    
+    return 0;
+}
+
