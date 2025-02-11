@@ -1,0 +1,77 @@
+# 첫 번째 3자리 숫자 입력
+while True:
+    try:
+        a = int(input("첫 번째 3자리 숫자를 입력하세요: "))
+        if 100 <= a <= 999:
+            break
+        else:
+            print("잘못된 입력 입니다. 3자리 숫자를 입력 하세요.")
+    except ValueError:
+        print("정수만 입력할 수 있습니다. 다시 시도하세요.")
+
+# 두 번째 3자리 숫자 입력
+while True:
+    try:
+        b = int(input("두 번째 3자리 숫자를 입력하세요: "))
+        if 100 <= b <= 999:
+            break
+        else:
+            print("잘못된 입력 입니다. 3자리 숫자를 입력 하세요.")
+    except ValueError:
+        print("정수만 입력할 수 있습니다. 다시 시도하세요.")
+
+# 세 번째 3자리 숫자 입력
+while True:
+    try:
+        c = int(input("세 번째 3자리 숫자를 입력하세요: "))
+        if 100 <= c <= 999:
+            break
+        else:
+            print("잘못된 입력 입니다. 3자리 숫자를 입력 하세요.")
+    except ValueError:
+        print("정수만 입력할 수 있습니다. 다시 시도하세요.")
+
+# 네 번째 3자리 숫자 입력
+while True:
+    try:
+        d = int(input("네 번째 3자리 숫자를 입력하세요: "))
+        if 100 <= d <= 999:
+            break
+        else:
+            print("잘못된 입력 입니다. 3자리 숫자를 입력 하세요.")
+    except ValueError:
+        print("정수만 입력할 수 있습니다. 다시 시도하세요.")
+
+# 내림차순 정렬: 가장 큰 수가 a, 그 다음 b, c, d 순이 되도록 조건문으로 위치를 바꿉니다.
+if a < b:
+    temp = a
+    a = b
+    b = temp
+
+if a < c:
+    temp = a
+    a = c
+    c = temp
+
+if a < d:
+    temp = a
+    a = d
+    d = temp
+
+if b < c:
+    temp = b
+    b = c
+    c = temp
+
+if b < d:
+    temp = b
+    b = d
+    d = temp
+
+if c < d:
+    temp = c
+    c = d
+    d = temp
+
+# 정렬된 결과 출력
+print("내림차순 정렬 결과:", a, b, c, d)
