@@ -4,10 +4,8 @@ int main(void){
     
 
     int num;
-    do{
     printf("0부터 9까지의 숫자를 입력하세요: ");
     scanf("%d", &num);
-    }while (num < 0 || num > 9);
     
     switch(num) {
         case 0:
@@ -40,7 +38,7 @@ int main(void){
         case 9:
             printf("J\n");
             break;
-        dafault:
+        default:
             printf("잘못된 입력입니다!\n");
             break;
     }
