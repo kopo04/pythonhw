@@ -3,7 +3,7 @@
 int main(void){
     
     int score;
-    double bonus = 0.0;
+    float bonus = 0.0;
     
     printf(" 0 ~ 100점 까지의 시험 점수를 입력하세요: ");
     scanf("%d", &score);
@@ -29,8 +29,8 @@ int main(void){
             break;
     }
     
-    printf("추가 보너스: %.2lf\n", bonus);
-    printf("최종 점수: %.2lf\n", score + bonus);
+    printf("추가 보너스: %.2f\n", bonus);
+    printf("최종 점수: %.2f\n", score + bonus);
     
     return 0;
 }
