@@ -6,13 +6,11 @@ int main(void)
     int hundred, ten, one;
     int sum;
     
-    do{
-        printf("0부터 999까지의 정수를 입력하세요:");
-        scanf("%d", &num);
-        if (num < 0 || num > 999){
-            printf("입력값이 범위를 벗어났습니다.\n");
-        }
-    } while(num < 0 || num > 999);
+    printf("0부터 999까지의 정수를 입력하세요:");
+    scanf("%d", &num);
+    if (num < 0 || num > 999){
+        printf("입력값이 범위를 벗어났습니다.\n");
+    } 
     
     hundred = num / 100;
     ten = (num % 100) / 10;
@@ -34,4 +32,3 @@ int main(void)
     }
     return 0;
 }
-
