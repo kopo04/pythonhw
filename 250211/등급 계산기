@@ -5,7 +5,7 @@ int main(void){
     int score;
     double bonus = 0.0;
     
-    printf("시험 점수를 입력하세요: ");
+    printf(" 0 ~ 100점 까지의 시험 점수를 입력하세요: ");
     scanf("%d", &score);
     
     switch (score / 10){
@@ -34,4 +34,3 @@ int main(void){
     
     return 0;
 }
-
