@@ -3,8 +3,8 @@
 int main(void)
 {
     int num;
-    int hundred = 0, ten = 0, one = 0;
-    int sum = 0;
+    int hundred, ten, one;
+    int sum;
     
     do{
         printf("0부터 999까지의 정수를 입력하세요:");
