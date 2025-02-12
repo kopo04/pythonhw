@@ -15,7 +15,7 @@ int main(void)
         printf("3번. %d", A + B);
     }
     else {
-        printf("4번. 서로 같은 수이다.%d %d", A, B);
+        printf("4번. %d %d", A, B);
     }
     return 0;
 }
