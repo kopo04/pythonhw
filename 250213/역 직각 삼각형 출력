@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+void main() {
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) { // 줄 수
+        for (int j = n; j >= i; j--) { // 별 개수
+            printf("*");
+        }
+        printf("\n"); // 개행
+    }
+}
