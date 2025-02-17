@@ -1,0 +1,89 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+    int arr[5] = {5, 8, 3, 6, 2};
+    
+    printf("초기 : ");
+    for (i = 0; i < 1; i++) {
+        printf("%d", arr[i]);
+    }
+    printf(" 삽입할 요소 : %d", arr[1]);
+
+    if (arr[1] < arr[0]) {
+        int temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    }
+    printf("\t 1단계 : ");
+    for (i = 0; i < 2; i++) {
+        printf("%d", arr[i]);
+    }
+    printf(" 삽입할 요소 : %d", arr[2]);
+    
+    if (arr[2] < arr[1]) {
+        int temp = arr[1];
+        arr[1] = arr[2];
+        arr[2] = temp;
+    }
+    if (arr[1] < arr[0]) {
+        int temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    }
+    printf("\t 2단계 : ");
+    for (i = 0; i < 3; i++) {
+        printf("%d", arr[i]);
+    }
+    printf(" 삽입할 요소 : %d", arr[3]);
+    
+    if (arr[3] < arr[2]) {
+        int temp = arr[2];
+        arr[2] = arr[3];
+        arr[3] = temp;
+    }
+    if (arr[2] < arr[1]) {
+        int temp = arr[1];
+        arr[1] = arr[2];
+        arr[2] = temp;
+    }
+    if (arr[1] < arr[0]) {
+        int temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    }
+    printf("\t 3단계 : ");
+    for (i = 0; i < 4; i++) {
+        printf("%d", arr[i]);
+    }
+    printf(" 삽입할 요소 : %d", arr[4]);
+    
+    if (arr[4] < arr[3]) {
+        int temp = arr[3];
+        arr[3] = arr[4];
+        arr[4] = temp;
+    }
+    if (arr[3] < arr[2]) {
+        int temp = arr[2];
+        arr[2] = arr[3];
+        arr[3] = temp;
+    }
+    if (arr[2] < arr[1]) {
+        int temp = arr[1];
+        arr[1] = arr[2];
+        arr[2] = temp;
+    }
+    if (arr[1] < arr[0]) {
+        int temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    }
+    printf("\t 최종 정렬 : ");
+    for (i = 0; i < 5; i++) {
+        printf("%d", arr[i]);
+    }
+    
+    return 0;
+}   
+
+    
