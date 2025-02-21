@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    enum carType {
+        SEDAN = 1,
+        SUV,
+        TRUCK,
+        VAN
+    };
+
+    enum carType a;
+    
+    char carName[10];
+    scanf("%s", &carName);
+    
+    if ( strcmp(carName, "sonata") == 0 || strcmp(carName, "avante") == 0  ) {
+        a = SEDAN;
+    } else if ( strcmp(carName, "santafe") == 0) {
+        a = SUV;
+    } else if ( strcmp(carName, "bongo") == 0) {
+        a = TRUCK;
+    } else if ( strcmp(carName, "carnival") == 0) {
+        a = VAN;
+    } else printf("차량 정보 없음");
+    
+    switch (a) {
+        case SEDAN:
+            printf("SEDAN");
+            break;
+        case SUV:
+            printf("SUV");
+            break;
+        case TRUCK:
+            printf("TRUCK");
+            break;
+        case VAN:
+            printf("VAN");
+            break;
+    }
+    
+    
+}
