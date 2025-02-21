@@ -9,21 +9,40 @@ int main()
         TRUCK,
         VAN
     };
-
+    
+    char *A[] = {"sonata", "avante", "grander"};
+    char *B[] = {"santafe"};
+    char *C[] = {"bongo"};
+    char *D[] = {"carnival"};
+    
+    int A_limit = sizeof(A) / sizeof(A[0]);
+    int B_limit = sizeof(B) / sizeof(B[0]);
+    
     enum carType a;
     
     char carName[10];
     scanf("%s", &carName);
     
-    if ( strcmp(carName, "sonata") == 0 || strcmp(carName, "avante") == 0  ) {
-        a = SEDAN;
-    } else if ( strcmp(carName, "santafe") == 0) {
+    for (int i; i < A_limit; i++)
+        if (strcmp(carName, A[i]) == 0) {
+            a = SEDAN;
+            break;
+        }
+    for (int j; j < B_limit; j++){
+        if ( strcmp(carName, B[i]) == 0) {
         a = SUV;
-    } else if ( strcmp(carName, "bongo") == 0) {
+        break;
+        }
+    }
+        
+        
+        
+         else if ( strcmp(carName, "bongo") == 0) {
         a = TRUCK;
     } else if ( strcmp(carName, "carnival") == 0) {
         a = VAN;
-    } else printf("차량 정보 없음");
+    } else
+        printf("차량 정보 없음");
     
     switch (a) {
         case SEDAN:
@@ -38,7 +57,8 @@ int main()
         case VAN:
             printf("VAN");
             break;
-    }
+        default:
+            printf("차량 정보 없음");
     
     
 }
